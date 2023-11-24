@@ -1,0 +1,64 @@
+body{
+    font-size: 42px;
+    box-sizing: border-box;
+    background-color: aqua;
+}
+
+input{
+    width: 200px;
+    border: 2px solid #323b32;
+    height: 25px;
+    background-color:rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+}
+
+button{
+    background-color: #ca3535;
+    padding: 8px 18px;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #ca9635;
+}
+
+.wheather-wrapper{
+    margin:auto;
+    max-width: 1200px;
+}
+
+.wheather-widget{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.container-widget{
+    display: flex;
+    justify-content: space-between;
+}
+
+.wheather_info_description{
+    display: grid;
+    flex-wrap: wrap;
+}
+
+#wheather_icon{
+    width: 300px;
+    height: 300px;
+    display: none;
+}
+
+form{
+    margin-top: 18px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+    
+form div{
+    margin-bottom: 15px;
+    position: relative;
+}
