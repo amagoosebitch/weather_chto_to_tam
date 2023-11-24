@@ -66,7 +66,7 @@ class WeatherWidget {
     if (!this.map) {
       this.map = new ymaps.Map("map", {
         center: [latitude, longitude],
-        zoom: 5,
+        zoom: 12,
       });
     }
     this.map.setCenter([latitude, longitude]);
