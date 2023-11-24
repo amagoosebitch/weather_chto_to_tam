@@ -63,14 +63,13 @@ class WeatherWidget {
   }
 
   init_map(latitude, longitude) {
-    if (this.map  === null) {
+    if (!this.map) {
       this.map = new ymaps.Map("map", {
         center: [latitude, longitude],
-        zoom: 9,
+        zoom: 5,
       });
-      this.map.setCenter([latitude, longitude]);
     }
-    return newMap;
+    this.map.setCenter([latitude, longitude]);
   }
 
   async getDataWheather(
@@ -93,9 +92,10 @@ const addWidget = document.getElementById("add");
 addWidget.addEventListener("click", addWidgetFunc);
 
 function addWidgetFunc() {
-  const element = document.getElementById(`weather${widgets.length}`);
+  const widgetsLen = widgets.length
+  const element = document.getElementById(`weather${widgetsLen}`);
   const clone = element.cloneNode(true);
-  const newId = `weather${widgets.length + 1}`;
+  const newId = `weather${widgetsLen + 1}`;
   clone.id = newId;
   element.parentNode.insertBefore(clone, element);
   widgets.push(new WeatherWidget(newId));
